@@ -1,13 +1,15 @@
-document.getElementById("scroll-logo").classList.add("above-logo")
+document.getElementById("scrollLogo").classList.add("aboveLogo")
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    document.getElementById("scroll").classList.add("above")
-    document.getElementById("scroll-logo").classList.remove("above-logo")
+    document.getElementById("scrollHeader").classList.add("aboveHeader");
+    document.getElementById("scrollLogo").classList.remove("aboveLogo");
+    document.getElementById("scrollName").classList.add("aboveName");
   } else {
-    document.getElementById("scroll").classList.remove("above")
-    document.getElementById("scroll-logo").classList.add("above-logo")
+    document.getElementById("scrollHeader").classList.remove("aboveHeader");
+    document.getElementById("scrollLogo").classList.add("aboveLogo");
+    document.getElementById("scrollName").classList.remove("aboveName");
   }
 }

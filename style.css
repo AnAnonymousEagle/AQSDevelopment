@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url(//db.onlinewebfonts.com/c/c545a36000d0fe5eb6dd44b3cabda9cf?family=Posterama);
+
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding: 5px 15px;
+  border: 3px solid var(--primary);
+  z-index: 100000000;
+}
+
+
+:root {
+  --primary: #014040;
+  --secondary: #F2ECE9; 
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -7,7 +25,6 @@
   'GRAD' 0,
   'opsz' 48
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -23,9 +40,11 @@ html {
 body {
   background-color: whitesmoke;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  font-kerning: normal;
 }
 
-#mainlogo {
+.mainlogo {
   display: flex;
   margin: 0;
   height: 2em;
@@ -57,8 +76,16 @@ body {
   border-radius: 50px;
 }
 
+#brand-name {
+  color: var(--primary);
+  font-size: 1.2rem;
+  left: 55px;
+  font-family: "Posterama", sans-serif;
+  width: auto;
+}
+
 header {
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.564) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.564) 60%, rgba(255, 255, 255, 0) 100%);
   position: fixed;  
   left: 0;
   width: 100%;
@@ -84,8 +111,24 @@ header .logo {
 }
 
 .logo-wrapper {
+  height: 100%;
+  width: auto;
+  display: flex;
   transition: 0.3s ease;
+  align-items: center;
+  justify-content: center
 }
+
+.logo-wrapper p {
+
+  padding-left: 20px;
+  position: absolute;
+  top: 50%;
+  width: 500px;
+  transform: translate(0, -50%);
+}
+
+
 
 header ul {
   position: relative;
@@ -110,17 +153,9 @@ header ul li a{
 }
 
 
-.above {
-  background-color: white;
-  border-bottom: 10px solid #014040;
-}
-
-.above-logo {
-  transform: scale(1.2);
-}
 
 .slide {
-  width: 100%;
+  width: 100% !important;
   height: 100vh;
   user-select: none;
   background-attachment: fixed;
@@ -140,6 +175,21 @@ section {
   margin: 50px 80px 20px 80px;
 }
 
+/* Javascript Scroll Function CSS */
 
 
+.aboveHeader {
+  background-color: white;
+  border-bottom: 10px solid var(--primary);
+  box-shadow: 0px 4px 10px -2px gray;
+}
+
+.aboveLogo {
+  transform: scale(1.2);
+}
+
+.aboveName {
+  font-size: 1.2rem;
+  width: 500px;
+}
 
