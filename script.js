@@ -1,4 +1,4 @@
-
+document.getElementById("scroll-logo").classList.add("above-logo")
 
 window.onscroll = function() {scrollFunction()};
 
