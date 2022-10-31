@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: var(--primary);
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   font-kerning: normal;
@@ -146,7 +146,7 @@ header .logo {
   transition: 0.4s;
   padding: 5px 15px;
   height: 30px;
-  width: 80px;
+  width: 90px;
   border-radius: 5px;
 }
 
@@ -156,11 +156,11 @@ header .logo {
   border: 1px solid var(--primary);
 }
 
-.regbtn {
+/* .regbtn {
   background-color: var(--primary);
   color: var(--secondary);
   border: none;
-}
+} */
 
 button:hover {
   color: white;
@@ -169,7 +169,9 @@ button:hover {
 }
 
 /* Sections */
-section {
+section:not(#section1) {
+  padding: 20px 40px;
+  background-color: var(--secondary);
   position: relative;
   display: block;
 }
@@ -188,14 +190,16 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("slide2.png");
+  background-image: url(slide2.png);
 }
+
+
 
 /* Javascript Scroll Function CSS */
 .aboveHeader {
   background-color: white;
   border-bottom: 10px solid var(--primary);
-  box-shadow: 0px 4px 10px -2px gray;
+  box-shadow: 0px 4px 10px -2px var(--primary);
 }
 
 .aboveLogo {
@@ -206,3 +210,7 @@ section {
   font-size: 1.2rem;
   width: 500px;
 }
+
+
+
+
